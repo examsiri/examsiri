@@ -100,4 +100,17 @@ body {
         box-shadow: rgba(0, 0, 0, 0.45) 0px -5px 5px -5px !important
     }
 
- 
+    .dataTables_filter{ 
+        margin:20px;
+        text-align: center; 
+     }
+     .dataTables_filter label::after{
+        display: none;
+     }
+     table td{
+       vertical-align: middle;
+     }
+
+     .cursor-hand{
+        cursor: grab !important;
+     }
