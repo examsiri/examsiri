@@ -1,0 +1,119 @@
+[
+
+    {
+        "title": "Accountancy",
+        "url": "accountancy",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Biology",
+        "url": "biology",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Biotechnology",
+        "url": "biotechnology",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Business Studies",
+        "url": "business-studies",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Chemistry",
+        "url": "chemistry",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Computer Science (Cpp)",
+        "url": "computer-science-cpp",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Economics",
+        "url": "economics",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Engineering Graphics",
+        "url": "engineering-graphics",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "English",
+        "url": "english",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Entrepreneurship",
+        "url": "entrepreneurship",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Geography",
+        "url": "geography",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Hindi Core",
+        "url": "hindi-core",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Hindi Elective",
+        "url": "hindi-elective",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "History",
+        "url": "history",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Home Science",
+        "url": "home-science",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Informatics Practice",
+        "url": "informatics-practice",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Legal Studies",
+        "url": "legal-studies",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Maths",
+        "url": "maths",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Physical Education",
+        "url": "physical-education",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Physics",
+        "url": "physics",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Political Science",
+        "url": "political-science",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Psychology",
+        "url": "psychology",
+        "article": "Accountancy Text Here"
+    },
+    {
+        "title": "Sociology",
+        "url": "sociology",
+        "article": "Accountancy Text Here"
+    }
+    
+    ]

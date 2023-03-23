@@ -14,6 +14,11 @@
 <link rel="stylesheet" src="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js" ></script>
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css"/>
+<script src="../js/commons.js"></script>
+
 
 </head>
 
@@ -33,7 +38,7 @@
 <nav class="mt-2">
     <ol class="breadcrumb m-0">
 
-    <li class="breadcrumb-item"> <a href="../index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">CBSE 12</li>
+    <li class="breadcrumb-item" id="bcrumb0"> <a id="crumb0" href="../index.html">Home</a></li><li id="bcrumb1" class="breadcrumb-item active" aria-current="page">CBSE 12</li>
 
 </ol>
 </nav>
@@ -54,111 +59,110 @@
         <thead>
           <tr>
             <th></th>
-            <th scope="col" class="p-3 text-primary" >Subject Name</th> 
+            <th scope="col" class="p-3 text-primary" >Subjects</th> 
             <th scope="col"></th> 
           </tr>
         </thead>
         <tbody>
             
-
+        
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Accountancy</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=accountancy">CBSE Class 12 Accountancy</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Biology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=biology">CBSE Class 12 Biology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Biotechnology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=biotechnology">CBSE Class 12 Biotechnology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Business Studies</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=business-studies">CBSE Class 12 Business Studies</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Chemistry</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=chemistry">CBSE Class 12 Chemistry</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Computer Science (Cpp)</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=computer-science-cpp">CBSE Class 12 Computer Science (Cpp)</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Economics</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=economics">CBSE Class 12 Economics</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Engineering Graphics</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=engineering-graphics">CBSE Class 12 Engineering Graphics</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 English</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=english">CBSE Class 12 English</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Entrepreneurship</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=entrepreneurship">CBSE Class 12 Entrepreneurship</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Geography</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=geography">CBSE Class 12 Geography</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Hindi Core</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=hindi-core">CBSE Class 12 Hindi Core</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Hindi Elective</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=hindi-elective">CBSE Class 12 Hindi Elective</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 History</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=history">CBSE Class 12 History</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Home Science</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=home-science">CBSE Class 12 Home Science</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Informatics Practice</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=informatics-practice">CBSE Class 12 Informatics Practice</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Legal Studies</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=legal-studies">CBSE Class 12 Legal Studies</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Maths</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=maths">CBSE Class 12 Maths</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Physical Education</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=physical-education">CBSE Class 12 Physical Education</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Physics</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=physics">CBSE Class 12 Physics</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Political Science</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=political-science">CBSE Class 12 Political Science</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Psychology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=psychology">CBSE Class 12 Psychology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
         <tr class="p-3 m-3" >
-            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html">CBSE Class 12 Sociology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
+            <td class="p-3"></td><td class="p-3"><a href="../cbse/cbse12/subject.html?subject=sociology">CBSE Class 12 Sociology</a></td> <td class="p-3">  <i class="fa-solid fa-chevron-right"></i></td>  
         </tr> 
 
   
  </tbody>
  </table>
 </div>
-
-
+ 
             </main>
         </div>
         <div class="col-md-2"></div>
