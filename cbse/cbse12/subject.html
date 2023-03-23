@@ -43,8 +43,8 @@
 </ol>
 </nav>
             <main class="mainsection">
-                <h1 id="docTitle" class="h1 text-white mb-3 text-center h4 bg-primary p-3"></h1>
-                <h4 id="docArticle" class="h4 mb-3 text-left bg-light p-3"></h4>
+                <h1 id="docTitle" class="text-white mb-3 mt-3 text-center h3 bg-primary p-3"></h1>
+                <div id="docArticle" class="mb-3 text-left bg-light p-3"></div>
                 <div id="myGrid" class="ag-theme-alpine"></div>
                 <script>
                     var filename = "download";
@@ -81,12 +81,9 @@
                         .then(response => response.json())
                         .then(data => {
                             if (data != 404) {
-                                data.forEach(function(item,index){ 
-                                    
-                                    if(item['url'] == subkey){ 
-                                     
-
-                                    $('#docTitle').html("CBSE Class 12 "+item['title']+" Papers to download")
+                                data.forEach(function(item,index){  
+                                    if(item['url'] == subkey){   
+                                    $('#docTitle').html("CBSE Class 12 "+item['title']+" Papers")
                                     $('#docArticle').html(item['article'])
                                   }
                                 })
