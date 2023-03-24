@@ -114,3 +114,10 @@ body {
      .cursor-hand{
         cursor: grab !important;
      }
+
+     iframe {
+        background-image: url("/img/loading.gif");   
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+        background-position: center;
+     }
