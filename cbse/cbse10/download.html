@@ -21,8 +21,8 @@
 
     
 
-    <script> var localsubpath =  '../../core/cbse12.json';
- var gpdfurl =  'https://script.google.com/macros/s/AKfycby0B8Rmda8qEwItVG7x-F1TRWaA0GsEQf6k3cn4q0tjcuzBe8W7kJ-qFMrSIRMd_vaJ/exec';
+    <script> var localsubpath =  '../../core/cbse10.json';
+ var gpdfurl =  'https://script.google.com/macros/s/AKfycbwqsn0LiJjK7TXwGGnfotar0XuzgFqJ9WTLL5hANKXESaHqQT3GQSDzusXlmziUVeE/exec';
 </script>
 
     <script></script>
@@ -44,76 +44,37 @@
 <nav class="mt-2">
     <ol class="breadcrumb m-0">
 
-    <li class="breadcrumb-item" id="bcrumb0"> <a id="crumb0" href="../../index">Home</a></li><li class="breadcrumb-item" id="bcrumb1"> <a id="crumb1" href="../../cbse/cbse">CBSE</a></li><li class="breadcrumb-item" id="bcrumb2"> <a id="crumb2" href="../../cbse/cbse12">Class 12 Subjects</a></li><li id="bcrumb3" class="breadcrumb-item active" aria-current="page">Papers</li>
+    <li class="breadcrumb-item" id="bcrumb0"> <a id="crumb0" href="../../index">Home</a></li><li class="breadcrumb-item" id="bcrumb1"> <a id="crumb1" href="../../cbse/cbse">CBSE</a></li><li class="breadcrumb-item" id="bcrumb2"> <a id="crumb2" href="../../cbse/cbse10">Class 10 Subjects</a></li><li class="breadcrumb-item" id="bcrumb3"> <a id="crumb3" href="../../cbse/cbse10/subject">Papers</a></li><li id="bcrumb4" class="breadcrumb-item active" aria-current="page">Download</li>
 
 </ol>
 </nav>
             <main class="mainsection">
-                <h1 id="docTitle" class="text-white mb-3 mt-3 text-center h3 bg-primary p-3"></h1>
-                <div id="docArticle" class="mb-3 text-left bg-light p-3"></div>
-                <div id="myGrid" class="ag-theme-alpine"></div>
-                <script>
-                    var filename = "download";
+                <div class="row">
+                    <div class="col-12 mt-2">
+                        <h1 class="h1 text-white mb-3 text-center h4 bg-primary p-3" id="doctitle"></h1>
+                         
+                        <iframe class="col-12 mt-2 p-0" src="" id="downloadpdf" style="height:80vh;"   frameborder="0"></iframe>
+                    </div>
+                </div>
+                <script>   
                     
-                    var gridOptions = {
-                        columnDefs: [
-                            {
-                                headerName: "SNo", maxWidth: 80,
-                                valueGetter: "node.rowIndex + 1"
-                            },
-                            { headerName: 'Year', field: "2", sort: "asc", sortable: true, filter: true, maxWidth: 100 },
-                            { headerName: 'Question Paper', field: "3", wrapText: false, sortable: true, filter: true, minWidth: 360 },
-                            {
-                                headerName: 'Download',
-                                field: '0',
-                                cellRenderer: function (params) {
-                                    return `<a class="btn btn-sm mt-2 btn-outline-danger" href="${filename}?key=${params.value}" rel="noopener"> <i class="fa-solid fa-file-pdf"></i></a>`
-
-                                }
-                            }
-                        ],
-                        defaultColDef: {
-                            flex: 1,
-                            minWidth: 100,
-                        },
-                        domLayout: 'autoHeight',
-                        animateRows: true,
-                    }
-                    var gridDiv = document.querySelector('#myGrid');
-                    new agGrid.Grid(gridDiv, gridOptions);
-                    var subkey = getQueryStringByKey('subject');
-                    $("#bcrumb3").html(subkey);
-                    fetch(localsubpath)
+                    fetch((gpdfurl+'?key=' + getQueryStringByKey('key')))
                         .then(response => response.json())
                         .then(data => {
-                            if (data != 404) {
-                                data.forEach(function(item,index){  
-                                    if(item['url'] == subkey){   
-                                    $('#docTitle').html("CBSE Class 12 "+item['title']+" Papers")
-                                    $('#docArticle').html(item['article'])
-                                  }
-                                })
+                            if (data != 404) { 
+                                var parsed = JSON.parse(JSON.stringify(data));
+                                document.getElementById("downloadpdf").src = parsed[4];
+                                $("#doctitle").html(parsed[3]); 
+                                $('#crumb3').attr("href", $('#crumb3').attr('href')+'?subject='+parsed[1]);
+                                $('#crumb3').text(parsed[1])
                             }
                             else {
-                                
+                                $("#doctitle").html("File Not Found..");
                             }
-                            
-                    });
-                            
-                    fetch(gpdfurl+"?subject=" + getQueryStringByKey('subject'))
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data != 404) {
-                                gridOptions.api.setRowData(data);
-                            }
-                            else {
-                                gridOptions.api.setRowData([]);
-                            }
-                            gridOptions.api.sizeColumnsToFit();
                         });
-                        console.log("Finish Loading script");
+                </script>
 
-                </script>                
+
             </main>
         </div>
         <div class="col-md-2"></div>
@@ -128,6 +89,11 @@
     <div class="col-md-2"></div>
 </div>
 </body>
+<script>
+    $(document).ready(function () { 
+        
 
-
+    });
+    
+</script>
 </html>

@@ -13,7 +13,9 @@ body {
     padding: 5px !important;
     min-height: 80vh !important;
 }
-
+.navbar-nav .nav-link{
+    color: #FFFFFF  !important;
+}
 @media (max-width:992px) {
     .navbar-nav .nav-item {
         border-bottom: 1px solid #dee2e6 !important
@@ -23,6 +25,9 @@ body {
     }
     .nav-link.text-white {
         color: #1f5c8b!important;
+    }
+    .navbar-nav .nav-link{
+        color: #1f5c8b  !important;
     }
     .navbar-collapse {
         position: absolute;
@@ -75,10 +80,11 @@ body {
     .navbar-brand{
         font-weight: bolder !important;
         
+        
     }
     .navbar-brand.text-primary{
         
-        color: #00a2bd !important;
+        color: #FFFFFF !important;
     }
     
     .bg-primary {

@@ -19,12 +19,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css"/>
 <script src="../../js/commons.js"></script>
 
-    
-
-    <script> var localsubpath =  '../../core/cbse12.json';
- var gpdfurl =  'https://script.google.com/macros/s/AKfycby0B8Rmda8qEwItVG7x-F1TRWaA0GsEQf6k3cn4q0tjcuzBe8W7kJ-qFMrSIRMd_vaJ/exec';
-</script>
-
     <script></script>
 </head>
 
@@ -35,7 +29,7 @@
             <header>
 
    
-      <nav id="navbar" class="navbar navbar-expand-lg border-bottom bg-primary border-primary  px-2 py-0  border-2"> <a class="navbar-brand text-primary fs-3" href="/"><img alt="examsiri logo" src="../../favicon/favicon.ico" class="mr-2 sitelogo"  height="30" width="30"/>Exam Siri</a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span><span class="close-icon py-1">✖</span></button><div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link fs-5 " href="../../../index">Home</a></li><li class="nav-item dropdown"><a class="nav-link fs-5 dropdown-toggle active" href="#" id="navbarDropdown1" data-bs-toggle="dropdown" aria-expanded="false" >CBSE</a><ul class="dropdown-menu dropdown-menu-right pb-1"><li class="nav-item border-bottom"><a class="dropdown-item" href="../../../cbse/cbse">CBSE</a></li><li class="nav-item border-bottom"><a class="dropdown-item" href="../../../cbse/cbse10">Class 10</a></li><li class="nav-item border-bottom"><a class="dropdown-item" href="../../../cbse/cbse12">Class 12</a></li></ul></li><li class="nav-item dropdown"><a class="nav-link fs-5 dropdown-toggle " href="#" id="navbarDropdown2" data-bs-toggle="dropdown" aria-expanded="false" >State</a><ul class="dropdown-menu dropdown-menu-right pb-1"><li class="nav-item border-bottom"><a class="dropdown-item" href="../../state/andhra">Andhra</a></li><li class="nav-item border-bottom"><a class="dropdown-item" href="../../state/bihar">Bihar</a></li></ul></li><li class="nav-item"><a class="nav-link fs-5 " href="../../about">About</a></li><li class="nav-item"><a class="nav-link fs-5 " href="../../contact">Contact</a></li></ul></div>  </nav>
+      <nav id="navbar" class="navbar navbar-expand-lg border-bottom bg-primary border-primary  px-2 py-0  border-2"> <a class="navbar-brand text-primary fs-3" href="../"><img alt="examsiri logo" src="../../favicon/favicon.ico" class="mr-2 sitelogo"  height="30" width="30"/>Exam Siri</a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span><span class="close-icon py-1">✖</span></button><div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link fs-5 " href="../../../index.html">Home</a></li><li class="nav-item dropdown"><a class="nav-link fs-5 dropdown-toggle active" href="#" id="navbarDropdown1" data-bs-toggle="dropdown" aria-expanded="false" >CBSE</a><ul class="dropdown-menu dropdown-menu-right pb-1"><li class="nav-item border-bottom"><a class="dropdown-item" href="../../../cbse/cbse.html">CBSE</a></li><li class="nav-item border-bottom"><a class="dropdown-item" href="../../../cbse/cbse10.html">Class 10</a></li><li class="nav-item border-bottom"><a class="dropdown-item" href="../../../cbse/cbse12.html">Class 12</a></li></ul></li><li class="nav-item dropdown"><a class="nav-link fs-5 dropdown-toggle " href="#" id="navbarDropdown2" data-bs-toggle="dropdown" aria-expanded="false" >State</a><ul class="dropdown-menu dropdown-menu-right pb-1"><li class="nav-item border-bottom"><a class="dropdown-item" href="../../state/andhra.html">Andhra</a></li><li class="nav-item border-bottom"><a class="dropdown-item" href="../../state/bihar.html">Bihar</a></li></ul></li><li class="nav-item"><a class="nav-link fs-5 " href="../../about.html">About</a></li><li class="nav-item"><a class="nav-link fs-5 " href="../../contact.html">Contact</a></li></ul></div>  </nav>
 
    
 </header>
@@ -44,7 +38,7 @@
 <nav class="mt-2">
     <ol class="breadcrumb m-0">
 
-    <li class="breadcrumb-item" id="bcrumb0"> <a id="crumb0" href="../../index">Home</a></li><li class="breadcrumb-item" id="bcrumb1"> <a id="crumb1" href="../../cbse/cbse">CBSE</a></li><li class="breadcrumb-item" id="bcrumb2"> <a id="crumb2" href="../../cbse/cbse12">Class 12 Subjects</a></li><li id="bcrumb3" class="breadcrumb-item active" aria-current="page">Papers</li>
+    <li class="breadcrumb-item" id="bcrumb0"> <a id="crumb0" href="../../index.html">Home</a></li><li class="breadcrumb-item" id="bcrumb1"> <a id="crumb1" href="../../cbse/cbse10.html">CBSE 10</a></li><li id="bcrumb2" class="breadcrumb-item active" aria-current="page">Subjects</li>
 
 </ol>
 </nav>
@@ -54,6 +48,8 @@
                 <div id="myGrid" class="ag-theme-alpine"></div>
                 <script>
                     var filename = "download";
+                    
+                        filename = "download.html";
                     
                     var gridOptions = {
                         columnDefs: [
@@ -82,14 +78,14 @@
                     var gridDiv = document.querySelector('#myGrid');
                     new agGrid.Grid(gridDiv, gridOptions);
                     var subkey = getQueryStringByKey('subject');
-                    $("#bcrumb3").html(subkey);
-                    fetch(localsubpath)
+                    $("#bcrumb2").html(subkey);
+                    fetch("../../core/cbse10.json")
                         .then(response => response.json())
                         .then(data => {
                             if (data != 404) {
                                 data.forEach(function(item,index){  
                                     if(item['url'] == subkey){   
-                                    $('#docTitle').html("CBSE Class 12 "+item['title']+" Papers")
+                                    $('#docTitle').html("CBSE Class 10 "+item['title']+" Papers")
                                     $('#docArticle').html(item['article'])
                                   }
                                 })
@@ -100,7 +96,7 @@
                             
                     });
                             
-                    fetch(gpdfurl+"?subject=" + getQueryStringByKey('subject'))
+                    fetch(gcbse10url+"?subject=" + getQueryStringByKey('subject'))
                         .then(response => response.json())
                         .then(data => {
                             if (data != 404) {

@@ -21,8 +21,8 @@
 
     
 
-    <script> var localsubpath =  '../../core/cbse12.json';
- var gpdfurl =  'https://script.google.com/macros/s/AKfycby0B8Rmda8qEwItVG7x-F1TRWaA0GsEQf6k3cn4q0tjcuzBe8W7kJ-qFMrSIRMd_vaJ/exec';
+    <script> var localsubpath =  '../../core/cbse10.json';
+ var gpdfurl =  'https://script.google.com/macros/s/AKfycbwqsn0LiJjK7TXwGGnfotar0XuzgFqJ9WTLL5hANKXESaHqQT3GQSDzusXlmziUVeE/exec';
 </script>
 
     <script></script>
@@ -44,7 +44,7 @@
 <nav class="mt-2">
     <ol class="breadcrumb m-0">
 
-    <li class="breadcrumb-item" id="bcrumb0"> <a id="crumb0" href="../../index">Home</a></li><li class="breadcrumb-item" id="bcrumb1"> <a id="crumb1" href="../../cbse/cbse">CBSE</a></li><li class="breadcrumb-item" id="bcrumb2"> <a id="crumb2" href="../../cbse/cbse12">Class 12 Subjects</a></li><li id="bcrumb3" class="breadcrumb-item active" aria-current="page">Papers</li>
+    <li class="breadcrumb-item" id="bcrumb0"> <a id="crumb0" href="../../index">Home</a></li><li class="breadcrumb-item" id="bcrumb1"> <a id="crumb1" href="../../cbse/cbse">CBSE</a></li><li class="breadcrumb-item" id="bcrumb2"> <a id="crumb2" href="../../cbse/cbse10">Class 10 Subjects</a></li><li id="bcrumb3" class="breadcrumb-item active" aria-current="page">Papers</li>
 
 </ol>
 </nav>
@@ -89,7 +89,7 @@
                             if (data != 404) {
                                 data.forEach(function(item,index){  
                                     if(item['url'] == subkey){   
-                                    $('#docTitle').html("CBSE Class 12 "+item['title']+" Papers")
+                                    $('#docTitle').html("CBSE Class 10 "+item['title']+" Papers")
                                     $('#docArticle').html(item['article'])
                                   }
                                 })
@@ -111,7 +111,7 @@
                             }
                             gridOptions.api.sizeColumnsToFit();
                         });
-                        console.log("Finish Loading script");
+                        
 
                 </script>                
             </main>
