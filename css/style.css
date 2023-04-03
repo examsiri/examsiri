@@ -133,6 +133,10 @@ body {
       cursor: grab !important;
    }
 
+   .article-text>h4{
+    color: #dc3545 !important;
+   } 
+
    iframe {
       background-image: url("/images/loading.gif");   
       background-repeat: no-repeat;
