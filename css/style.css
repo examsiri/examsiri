@@ -101,13 +101,13 @@ body {
   }
   .bg-primary {
       --bs-bg-opacity: 1;
-      background-color: #143b59 !important;
+      background-color: #055356 !important;
   }
   .text-primary{
       color: #dc3545 !important
   }
   .border-primary{
-      border-color: #143b59 !important;
+      border-color: #055356 !important;
   }
 
   #navbar{ 

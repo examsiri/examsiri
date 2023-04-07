@@ -9,3 +9,4 @@ function getQueryStringByKey(key){
         return '';
     }
 } 
+
